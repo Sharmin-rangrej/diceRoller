@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+         {
+            background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+        }
+        .image
+        {
+            height: 200px;
+            width:200px;
+            display: block;
+            margin:50px auto;
+        }
+        .btn1
+        {
+            height: 40px;
+            width:200px;
+            display: block;
+            margin:50px auto; 
+            font-size: 25px;
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185
+             52%, #cf556c 78%, #b12a5b 100%);
+             border-radius: 10px;
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="dice.png" class="image" id="dice-img" />
+    <button class="btn1" onclick="roll()"> Roll Dice</button>
+
+
+    <script>
+     function roll(){
+        const min = 1;
+        const max = 6;
+        const randomNumber = Math.round(Math.random() * ( max - min)) + min;
+        
+        const imgElement = document.getElementById('dice-img');
+
+        switch(randomNumber)
+        {
+            case 1: 
+            imgElement.src = 'one.png';
+            break;
+            case 2:
+            imgElement.src = 'two.png';
+            break;
+            case 3:
+            imgElement.src = 'three.png';
+            break;
+            case 4:
+            imgElement.src = 'four.png';
+            break;
+            case 5:
+            imgElement.src = 'five.png';
+            break;
+            case 6:
+            imgElement.src = 'six.png';
+            break;
+        }
+
+         
+     }
+        </script>
+</body>
+</html>
